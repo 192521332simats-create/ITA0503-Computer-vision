@@ -1,0 +1,10 @@
+import cv2
+
+image = cv2.imread(r"C:\Users\MADHUMITHA\OneDrive\Pictures\Screenshots\image.png\image 1.png")
+edges = cv2.Canny(image, 100, 200)
+
+cv2.imshow("Original Image", image)
+cv2.imshow("Canny Outline", edges)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
