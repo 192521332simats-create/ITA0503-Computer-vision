@@ -1,0 +1,23 @@
+import cv2
+
+image = cv2.imread(r"C:\Users\MADHUMITHA\OneDrive\Pictures\Screenshots\image.png\Image 5.png")
+
+print("Image size:", image.shape)
+
+roi = image[100:300, 100:300]
+
+copy = roi.copy()
+
+x, y = 50, 50
+h, w = copy.shape[:2]
+
+image[y:y+h, x:x+w] = copy
+
+cv2.imshow("ROI Pasted Image", image)
+cv2.imshow("Cropped ROI", roi)
+
+cv2.imwrite("cropped_roi.jpg", roi)
+cv2.imwrite("roi_pasted.jpg", image)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
