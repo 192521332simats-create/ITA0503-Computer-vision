@@ -1,0 +1,11 @@
+import cv2
+
+image = cv2.imread(r"C:\Users\MADHUMITHA\OneDrive\Pictures\Screenshots\image.png\image 3.png")
+
+rotated = cv2.rotate(image, cv2.ROTATE_180)
+
+cv2.imshow("Original Image", image)
+cv2.imshow("180 Degree Rotated Image", rotated)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
